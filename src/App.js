@@ -6,7 +6,8 @@ import React from 'react';
 // import UserInput from './UserInput'
 // import ContextExample from './ContextExample'
 // import UserInputCustomHook from './UserInputCustomHook'
-import CounterCustomHook from './CounterCustomHook'
+// import CounterCustomHook from './CounterCustomHook'
+import CustomHooksChallenge from './CustomHooksChallenge'
 
 
 const App = () => {
@@ -17,7 +18,8 @@ const App = () => {
   // return <UserInput />
   // return <ContextExample />
   // return <UserInputCustomHook />
-  return <CounterCustomHook />
+  // return <CounterCustomHook />
+  return <CustomHooksChallenge />
 }
 
 export default App;
