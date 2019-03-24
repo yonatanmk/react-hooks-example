@@ -4,7 +4,9 @@ import React from 'react';
 // import Lifecycle from './Lifecycle'
 // import EventListeners from './EventListeners'
 // import UserInput from './UserInput'
-import ContextExample from './ContextExample'
+// import ContextExample from './ContextExample'
+// import UserInputCustomHook from './UserInputCustomHook'
+import CounterCustomHook from './CounterCustomHook'
 
 
 const App = () => {
@@ -13,7 +15,9 @@ const App = () => {
   // return <Lifecycle />
   // return <EventListeners />
   // return <UserInput />
-  return <ContextExample />
+  // return <ContextExample />
+  // return <UserInputCustomHook />
+  return <CounterCustomHook />
 }
 
 export default App;
