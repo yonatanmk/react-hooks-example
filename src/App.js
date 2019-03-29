@@ -7,7 +7,11 @@ import React from 'react';
 // import ContextExample from './ContextExample'
 // import UserInputCustomHook from './UserInputCustomHook'
 // import CounterCustomHook from './CounterCustomHook'
-import CustomHooksChallenge from './CustomHooksChallenge'
+// import CustomHooksChallenge from './CustomHooksChallenge'
+// import Hooks from './Hooks2'
+// import LoginForm from './LoginForm'
+import RegisterForm from './RegisterForm'
+
 
 
 const App = () => {
@@ -19,7 +23,10 @@ const App = () => {
   // return <ContextExample />
   // return <UserInputCustomHook />
   // return <CounterCustomHook />
-  return <CustomHooksChallenge />
+  // return <CustomHooksChallenge />
+  // return <Hooks />
+  // return <LoginForm />
+  return <RegisterForm />
 }
 
 export default App;
