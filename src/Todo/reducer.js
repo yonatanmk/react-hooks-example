@@ -1,22 +1,20 @@
-import uuidv4 from 'uuid/v4'
-
 export default function reducer(state, action) {
   switch(action.type) {
-    case 'ADD_TODO':
-      if (!action.payload) {
-        return state;
-      }
-      if (state.todos.findIndex(todo => todo.text === action.payload) > -1) {
-        return state;
-      }
-      const newTodo = {
-        id: uuidv4(),
-        text: action.payload,
-        complete: false,
-      }
+    case 'GET_TODOS':
       return {
         ...state,
-        todos: [...state.todos, newTodo],
+        todos: action.payload,
+      }
+    case 'ADD_TODO':
+      // if (!action.payload) {
+      //   return state;
+      // }
+      // if (state.todos.findIndex(todo => todo.text === action.payload) > -1) {
+      //   return state;
+      // }
+      return {
+        ...state,
+        todos: [...state.todos, action.payload],
       }
     case 'SET_CURRENT_TODO':
       return {
@@ -24,20 +22,20 @@ export default function reducer(state, action) {
         currentTodo: action.payload,
       }
     case 'UPDATE_TODO':
-      if (!action.payload) {
-        return state;
-      }
-      if (state.todos.findIndex(todo => todo.text === action.payload) > -1) {
-        return state;
-      }
-      const updatedTodos = state.todos.map(todo => todo.id === state.currentTodo.id ? { ...state.currentTodo, text: action.payload } : todo)
+      // if (!action.payload) {
+      //   return state;
+      // }
+      // if (state.todos.findIndex(todo => todo.text === action.payload) > -1) {
+      //   return state;
+      // }
+      const updatedTodos = state.todos.map(todo => todo.id === state.currentTodo.id ? action.payload : todo)
       return {
         ...state,
         todos: updatedTodos,
         currentTodo: {},
       }
     case 'TOGGLE_TODO':
-      const toggledTodos = state.todos.map(todo => todo.id === action.payload.id ? {...todo, complete: !action.payload.complete} : todo)
+      const toggledTodos = state.todos.map(todo => todo.id === action.payload.id ? action.payload : todo)
       return {
         ...state,
         todos: toggledTodos,

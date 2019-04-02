@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
+import axios from 'axios'
+import uuidv4 from 'uuid/v4'
 import TodosContext from '../context';
 
 const TodoList = () => {
@@ -13,12 +15,20 @@ const TodoList = () => {
     }
   }, [currentTodo.id])
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
     if (currentTodo.text) {
-      dispatch({ type: 'UPDATE_TODO', payload: todo })
+      const response = await axios.patch(`http://localhost:3000/todos/${currentTodo.id}`, {
+        text: todo,
+      })
+      dispatch({ type: 'UPDATE_TODO', payload: response.data })
     } else {
-      dispatch({ type: 'ADD_TODO', payload: todo })
+      const response = await axios.post('http://localhost:3000/todos', {
+        id: uuidv4(),
+        text: todo,
+        complete: false,
+      })
+      dispatch({ type: 'ADD_TODO', payload: response.data })
     }
     setTodo('')
   }

@@ -1,8 +1,29 @@
 {
-  "todos": 
-    [
-      { "id": 1, "text": "Eat breakfast", "complete": false },
-      { "id": 2, "text": "Do laundry", "complete": false },
-      { "id": 3, "text": "Finish project", "complete": true }
-    ]
+  "todos": [
+    {
+      "id": 1,
+      "text": "Eat breakfast",
+      "complete": false
+    },
+    {
+      "id": 2,
+      "text": "Do laundry",
+      "complete": false
+    },
+    {
+      "id": 3,
+      "text": "Finish project",
+      "complete": true
+    },
+    {
+      "id": "e2ee07c6-faca-4b6c-8a67-29ddff1345c8",
+      "text": "Do more laundry",
+      "complete": false
+    },
+    {
+      "id": "42bff340-8a2a-4862-8a0f-086110140ef0",
+      "text": "Eat food",
+      "complete": true
+    }
+  ]
 }
