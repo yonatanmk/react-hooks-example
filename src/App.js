@@ -11,8 +11,9 @@ import React from 'react';
 // import Hooks from './Hooks2'
 // import LoginForm from './LoginForm'
 // import RegisterForm from './RegisterForm'
-import NewsApp from './NewsApp'
-
+// import NewsApp from './NewsApp'
+// import ReduxExample from './ReduxExample'
+import Todo from './Todo'
 
 
 const App = () => {
@@ -28,7 +29,9 @@ const App = () => {
   // return <Hooks />
   // return <LoginForm />
   // return <RegisterForm />
-  return <NewsApp />
+  // return <NewsApp />
+  // return <ReduxExample />
+  return <Todo />
 }
 
 export default App;
