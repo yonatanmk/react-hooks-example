@@ -10,7 +10,8 @@ import React from 'react';
 // import CustomHooksChallenge from './CustomHooksChallenge'
 // import Hooks from './Hooks2'
 // import LoginForm from './LoginForm'
-import RegisterForm from './RegisterForm'
+// import RegisterForm from './RegisterForm'
+import NewsApp from './NewsApp'
 
 
 
@@ -26,7 +27,8 @@ const App = () => {
   // return <CustomHooksChallenge />
   // return <Hooks />
   // return <LoginForm />
-  return <RegisterForm />
+  // return <RegisterForm />
+  return <NewsApp />
 }
 
 export default App;
